@@ -21,16 +21,32 @@
 //     </div>
 //   );
 // }
-
-import Hello from "./components/Hello";
 import "./App.css";
-import World from "./components/World";
+// import Hello from "./components/Hello";
+// import World from "./components/World";
+
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <Hello />
-      <World />
+    <div>
+      <Navbar />
+      <Header />
+
+      <div class="row">
+        <div className="col-md-3">
+          <Sidebar />
+        </div>
+        <div className="col-md-9">
+          <MainContent />
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }
