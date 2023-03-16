@@ -22,6 +22,7 @@
 //   );
 // }
 import "./App.css";
+import "./index.css";
 // import Hello from "./components/Hello";
 // import World from "./components/World";
 
@@ -30,23 +31,39 @@ import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
+import Sidebar2 from "./components/Sidebar2";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import $ from "jquery";
+import Popper from "popper.js";
+
+$(document).ready(function () {
+  $(".dropdown-toggle").dropdown();
+});
+
+window.jQuery = $;
+window.Popper = Popper;
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Header />
+      {/* <Header /> */}
 
       <div class="row">
-        <div className="col-md-3">
+        <div ClassName="col-md-3">
           <Sidebar />
         </div>
-        <div className="col-md-9">
+        <div className="col-md-3">
           <MainContent />
+        </div>
+        <div className="col-md-3">
+          <Sidebar2 />
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
